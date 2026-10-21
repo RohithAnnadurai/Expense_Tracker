@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Expenses
 
-#home / Dashboard
+#home
 def home(request):
     expenses = Expenses.objects.all()
     total_expenses = sum(expense.amount for expense in expenses)
